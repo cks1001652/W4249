@@ -1,0 +1,767 @@
+library(repmis)
+library(dplyr)
+filenames <- list(pusa_filename = "ss13pusa.csv", pusb_filename = "ss13pusb.csv",husa_filename = "ss13husa.csv", husb_filename = "ss13husb.csv")
+keys <- list(pusa_key = "2bag8q8jp61dsux", pusb_key = "dvvpzk7qj6r5nvb", #
+             husa_key = "5uubarlztxpw947", husb_key = "xjzc0noi23zv20j")
+pcolumns <- c("AGEP", "CIT", "ENG", "SCHL", "ST", "LANP") # change this to whatever columns we are using
+pusa <- source_DropboxData(file = filenames$pusa_filename, key = keys$pusa_key, sep = ",", header = TRUE, cache = TRUE, select = pcolumns)
+pusb <- source_DropboxData(file = filenames$pusb_filename, key = keys$pusb_key, sep = ",", header = TRUE, cache = TRUE, select = pcolumns)
+pus <- rbind(pusa, pusb)#
+rm(pusa, pusb)
+dim(pus)
+pus[1,]
+pcolumns <- c("AGEP", "CIT", "ENG", "SCHL", "ST", "LANP","MAR","FES","HHT","FINCP","HINCP","BLD") # change this to whatever columns we are using#
+#
+pusa <- source_DropboxData(file = filenames$pusa_filename, key = keys$pusa_key, sep = ",", header = TRUE, cache = TRUE, select = pcolumns)#
+pusb <- source_DropboxData(file = filenames$pusb_filename, key = keys$pusb_key, sep = ",", header = TRUE, cache = TRUE, select = pcolumns)#
+#
+pus <- rbind(pusa, pusb)#
+rm(pusa, pusb)#
+dim(pus)#
+pus[1,]
+keys <- list(pusa_key = "2bag8q8jp61dsux", pusb_key = "dvvpzk7qj6r5nvb", #
+             husa_key = "5uubarlztxpw947", husb_key = "xjzc0noi23zv20j")#
+pcolumns <- c("AGEP", "CIT", "ENG", "SCHL", "ST", "LANP","MAR","FES","HHT","FINCP","HINCP","BLD") # change this to whatever columns we are using#
+#
+pusa <- source_DropboxData(file = filenames$pusa_filename, key = keys$pusa_key, sep = ",", header = TRUE, cache = TRUE, select = pcolumns)#
+pusb <- source_DropboxData(file = filenames$pusb_filename, key = keys$pusb_key, sep = ",", header = TRUE, cache = TRUE, select = pcolumns)#
+#
+pus <- rbind(pusa, pusb)#
+rm(pusa, pusb)#
+dim(pus)#
+pus[1,]
+pcolumns <- c("AGEP", "CIT", "ENG", "SCHL", "ST", "LANP","MAR","FES","HHT","FINCP","HINCP","BLD") # change this to
+pusa <- source_DropboxData(file = filenames$pusa_filename, key = keys$pusa_key, sep = ",", header = TRUE, cache = TRUE, select = pcolumns)
+pusb <- source_DropboxData(file = filenames$pusb_filename, key = keys$pusb_key, sep = ",", header = TRUE, cache = TRUE, select = pcolumns)
+pus <- rbind(pusa, pusb)#
+rm(pusa, pusb)#
+dim(pus)
+library(repmis)#
+library(dplyr)#
+#
+filenames <- list(pusa_filename = "ss13pusa.csv", pusb_filename = "ss13pusb.csv",husa_filename = "ss13husa.csv", husb_filename = "ss13husb.csv")#
+keys <- list(pusa_key = "2bag8q8jp61dsux", pusb_key = "dvvpzk7qj6r5nvb", #
+             husa_key = "5uubarlztxpw947", husb_key = "xjzc0noi23zv20j")#
+pcolumns <- c("AGEP", "CIT", "ENG", "SCHL", "ST", "LANP","MAR","FES","HHT","FINCP","HINCP","BLD") # change this to whatever columns we are using#
+#
+pusa <- source_DropboxData(file = filenames$pusa_filename, key = keys$pusa_key, sep = ",", header = TRUE, cache = TRUE, select = pcolumns)#
+pusb <- source_DropboxData(file = filenames$pusb_filename, key = keys$pusb_key, sep = ",", header = TRUE, cache = TRUE, select = pcolumns)#
+#
+pus <- rbind(pusa, pusb)#
+rm(pusa, pusb)#
+dim(pus)#
+pus[1,]
+pcolumns <- c("AGEP", "CIT", "ENG", "SCHL", "ST", "LANP","MAR","FES","HHT","FINCP","HINCP","BLD") # change this to whatever columns we are using#
+#
+pusa <- source_DropboxData(file = filenames$pusa_filename, key = keys$pusa_key, sep = ",", header = TRUE, cache = FALSE, select = pcolumns)#
+pusb <- source_DropboxData(file = filenames$pusb_filename, key = keys$pusb_key, sep = ",", header = TRUE, cache = FALSE, select = pcolumns)#
+#
+pus <- rbind(pusa, pusb)#
+rm(pusa, pusb)#
+dim(pus)#
+pus[1,]
+keys <- list(pusa_key = "2bag8q8jp61dsux", pusb_key = "dvvpzk7qj6r5nvb", #
+             husa_key = "5uubarlztxpw947", husb_key = "xjzc0noi23zv20j")#
+pcolumns <- c("AGEP", "CIT", "ENG", "SCHL", "ST", "LANP","MAR") # change this to whatever columns we are using#
+pcolumns2 <- c("FES","HHT","FINCP","HINCP","BLD") #
+pusa <- source_DropboxData(file = filenames$pusa_filename, key = keys$pusa_key, sep = ",", header = TRUE, cache = FALSE, select = pcolumns)#
+pusb <- source_DropboxData(file = filenames$pusb_filename, key = keys$pusb_key, sep = ",", header = TRUE, cache = FALSE, select = pcolumns)#
+#
+husa <- source_DropboxData(file = filenames$pusa_filename, key = keys$pusa_key, sep = ",", header = TRUE, cache = FALSE, select = pcolumns2)#
+husb <- source_DropboxData(file = filenames$pusb_filename, key = keys$pusb_key, sep = ",", header = TRUE, cache = FALSE, select = pcolumns2)#
+pus <- rbind(pusa, pusb)#
+rm(pusa, pusb)#
+#
+hus <- rbind(husa,husb)#
+rm(husa,husb)#
+#
+dim(pus)#
+pus[1,]#
+#
+dim(hus)#
+hus[1,]
+readIn = function(reRead, colsToKeep, pathA, pathB){#
+  if(reRead == TRUE){#
+    popDataA = fread(pathA, select = colsToKeep)#
+    popDataA = fread(pathB, select = colsToKeep)#
+    popData = rbind(popDataA, popDataB)#
+    rm(popDataA, popDataB)#
+    save(popData, file = "popData.RData")#
+  }else{#
+    load("popData.RData")#
+  }#
+  return(popData)#
+}
+readIn(T,c("ST","FES","HHT","FINCP","HINCP","BLD"),"/Users/cheeseloveicecream/Documents/columbia/W4249","/Users/cheeseloveicecream/Documents/columbia/W4249")
+library(data.table)
+readIn(T,c("ST","FES","HHT","FINCP","HINCP","BLD"),"/Users/cheeseloveicecream/Documents/columbia/W4249","/Users/cheeseloveicecream/Documents/columbia/W4249")
+readIn(T,c("ST","FES","HHT","FINCP","HINCP","BLD"),"/Users/cheeseloveicecream/Documents/columbia/W4249/ss13pusa.csv","/Users/cheeseloveicecream/Documents/columbia/W4249/ss13pusb.csv")
+readIn = function(reRead, colsToKeep, pathA, pathB){#
+  if(reRead == TRUE){#
+    popDataA = fread(pathA, select = colsToKeep)#
+    popDataB = fread(pathB, select = colsToKeep)#
+    popData = rbind(popDataA, popDataB)#
+    rm(popDataA, popDataB)#
+    save(popData, file = "popData.RData")#
+  }else{#
+    load("popData.RData")#
+  }#
+  return(popData)#
+}#
+#
+readIn(T,c("ST","FES","HHT","FINCP","HINCP","BLD"),"/Users/cheeseloveicecream/Documents/columbia/W4249/ss13pusa.csv","/Users/cheeseloveicecream/Documents/columbia/W4249/ss13pusb.csv")
+preProcess = function(populData, filter, PARF, criteria, group, PARG){#
+  populData = tbl_df(populData)#
+  ds = populData %>%#
+    na.omit()#
+  if(filter){#
+    filter(ds, PARF %in% criteria)#
+  }#
+  if(group){#
+    group_by(ds, PARG)#
+  }#
+  return(ds)#
+}
+popData
+data1 <- readIn(T,c("ST","FES","HHT","FINCP","HINCP","BLD"),"/Users/cheeseloveicecream/Documents/columbia/W4249/ss13pusa.csv","/Users/cheeseloveicecream/Documents/columbia/W4249/ss13pusb.csv")
+dim(data1)
+data1[1]
+data1[2]
+data1[5555]
+load("popData.RData")
+ST
+readIn = function(reRead, colsToKeep, pathA, pathB){#
+  if(reRead == TRUE){#
+    popDataA = fread(pathA, select = colsToKeep)#
+    popDataB = fread(pathB, select = colsToKeep)#
+    popData = rbind(popDataA, popDataB)#
+    rm(popDataA, popDataB)#
+    save(popData, file = "popData.RData")#
+  }else{#
+    load("popData.RData")#
+  }#
+  return(popData)#
+}#
+#
+data1 <- readIn(T,c("ST","FES","HHT","FINCP","HINCP","BLD"),"/Users/cheeseloveicecream/Documents/columbia/W4249/ss13pusa.csv","/Users/cheeseloveicecream/Documents/columbia/W4249/ss13pusb.csv")
+readIn = function(reRead, colsToKeep, pathA, pathB){#
+  if(reRead == TRUE){#
+    popDataA = fread(pathA, select = colsToKeep)#
+    popDataB = fread(pathB, select = colsToKeep)#
+    popData = rbind(popDataA, popDataB)#
+    rm(popDataA, popDataB)#
+    save(popData, file = "popData.RData")#
+  }else{#
+    load("popData.RData")#
+  }#
+  return(popData)#
+}#
+#
+data1 <- readIn(T,c("ST","FES","HHT","FINCP","HINCP","BLD"),"/Users/cheeseloveicecream/Documents/columbia/W4249/ss13husa.csv","/Users/cheeseloveicecream/Documents/columbia/W4249/ss13husb.csv")
+dim(data1)
+preProcess = function(populData, filter, PARF, criteria, group, PARG){#
+  populData = tbl_df(populData)#
+  ds = populData %>%#
+    na.omit()#
+  if(filter){#
+    filter(ds, PARF %in% criteria)#
+  }#
+  if(group){#
+    group_by(ds, PARG)#
+  }#
+  return(ds)#
+}
+preProcess(data1)
+preProcess(data1,F)
+preProcess(data1,F,group=F)
+preProcess(data1,PARF=c("ST","BLD","FES","HHT"),criteria=as.factor(),group=F)
+preProcess(data1,filter=F,PARF=c("ST","BLD","FES","HHT"),criteria=as.factor(),group=F)
+preProcess(data1,filter=F,PARF=c("ST","BLD","FES","HHT"),criteria=as.factor,group=F)
+data1[,1]
+data1
+data1$ST
+ls(data1)
+attach(data1)
+ST
+preProcess(data1,filter=F,PARF=c(ST,FES,HHT,BLD),criteria=as.factor,group=F)
+ls(ST)
+ls(data1$ST)
+as.factor(data1$ST)
+preProcess(data1,filter=F,PARF=c(ST,FES,HHT,BLD),criteria=as.factor,group=F)
+is.numeric(data1$ST)
+data1$ST <- as.factor(data1$ST)
+is.factor(data1$ST)
+data1$ST <- as.factor(data1$ST)#
+data1$FES <- as.factor(data1$FES)#
+data1$HHT <- as.factor(data1$HHT)#
+data1$BLD <- as.factor(data1$BLD)
+data1
+preProcess(data1,F,group=F)
+plot(data1$ST,data1$HINCP)
+boxplot(data1$ST,data1$HINCP)
+mean(data1$HINCP)
+levels(ST)
+levels(data$ST)
+levels(data1$ST)
+dim(ST)
+dim(data1$ST)
+trail11 <- matrix(0,nrow=56,ncol=2)
+rep(56)
+rep(1,56)
+seq(1,56)
+trail1 <- matrix(0,nrow=56,ncol=2)
+trail1[,1] <- as.factor(seq(1,56))
+is.na(data1$HINCP)
+sum(is.na(data1$HINCP))
+sum(is.na(data1$HINCP,F))-sum(is.na(data1$HINCP))
+nrow(data1$HINCP)
+summary(data1$HINCP)
+data1
+pathA <- "/Users/cheeseloveicecream/Documents/columbia/W4249/ss13husa.csv"#
+pathB <- "/Users/cheeseloveicecream/Documents/columbia/W4249/ss13husb.csv"#
+colsToKeep <- c("ST","FES","HHT","FINCP","HINCP","BLD")#
+data2a<-fread(pathA, select = colsToKeep)#
+data2b<-fread(pathB, select = colsToKeep)#
+data2 <- rbind(data2a,data2b)#
+rm(data2a,data2b)
+ls(data2)
+summary(data2)
+data2[2,2]
+data2[2,3]
+data2[2,4]
+data2[2,3]
+data2[3,3]
+data2[4,3]
+data2[1,]
+data2[1,4]
+data2[1:10,]
+is.na(data[1,])
+is.na(data2[1,])
+data2$ST <- as.factor(data2$ST)#
+data2$FES <- as.factor(data2$FES)#
+data2$HHT <- as.factor(data2$HHT)#
+data2$BLD <- as.factor(data2$BLD)
+data2
+data2[1,2]
+data2[1,3]
+data2[1,4]
+data2[1,5]
+data2[1,6]
+data2[1,7]
+data2[1,8]
+ls(data2)
+levels(data2)
+data2[1,]
+data22 <- data.frame(data2)
+data22
+# Preparation#
+library("dplyr")#
+library("data.table")#
+library("ggplot2")#
+library("choroplethr")#
+#
+# Readin data#
+readIn = function(reRead, colsToKeep, pathA, pathB){#
+  if(reRead == TRUE){#
+    popDataA = fread(pathA, select = colsToKeep)#
+    popDataB = fread(pathB, select = colsToKeep)#
+    popData1 = rbind(popDataA, popDataB)#
+    rm(popDataA, popDataB)#
+    save(popData1, file = "popData1.RData")#
+  }else{#
+    load("popData1.RData")#
+  }#
+  return(popData1)#
+}#
+#
+data1 <- readIn(T,c("ST","FES","FINCP"),"/Users/cheeseloveicecream/Documents/columbia/W4249/ss13husa.csv","/Users/cheeseloveicecream/Documents/columbia/W4249/ss13husb.csv")#
+# Data Manipulation#
+data1 <- tbl_df(data1)#
+ds <- 	data1	%>%#
+		na.omit()	%>%#
+		filter(FES	%in%	c(1,2,3,4))	%>%#
+		group_by(FES)#
+rm(data1)#
+#
+# Visuliazation#
+fescode <- "FES,MarriedFamilyEmployType#
+1,Both in Labor Force#
+2,Husband in Labor Force#
+3,Wife in Labor Force#
+4,Neither in Labor Force"#
+fescodes <- fread(fescode)#
+#
+fesnumbers <- summarise(ds,count=n())#
+fesnumbers <- left_join(fesnumbers,fescodes,by.x=c("FES"))#
+Types <- factor(fesnumbers$MarriedFamilyEmployType,levels=unique(fesnumbers$MarriedFamilyEmployType))#
+#
+# Exploraring the basic statistics#
+ggplot(fesnumbers, aes(x= Types , y=fesnumbers$count, fill= Types)) +                        #
+     geom_bar(stat="identity") + scale_fill_hue(l=50) +#
+     ylab("Num of People") + #
+     xlab("Employment Status") + ggtitle("Comparing Enployment status of Married Family in the US") +#
+     theme(axis.text.x = element_text(angle = 10, hjust = 0.5),#
+     panel.background = element_rect(fill = 'white' ))#
+#
+summary(ds$FINCP)#
+# the 1st quantile is shown as 45800 dollars. We use this as bench line. We want to see the percentage under each type of family who has family income more than 45800 which is approxiamatly middle class.#
+medianper <- ds	%>%#
+			filter(FINCP>=77000)		%>%#
+			group_by(FES)	%>%#
+			summarise(count	=	n())		%>%#
+			mutate(Percent	=	count/fesnumbers$count*100)#
+ggplot(medianper, aes(x= Types , y=medianper$Percent, fill= Types)) +                        #
+       geom_bar(stat="identity") + scale_fill_hue(l=80) +#
+       ylab("Percent %") + #
+       xlab("Employment Status") + ggtitle("Percentages of different Employment Status")+#
+       theme(axis.text.x = element_text(angle = 10, hjust = 0.5),#
+       panel.background = element_rect(fill = 'white' ))#
+#
+stateCodeCSV <- "ST,region     #
+1	,	AL        2	,	AK         4	,	AZ        5	,	AR       6	,	CA     8	,	CO       9	,	CT    10	,	DE       11	,	DC      12	,	FL        13	,	GA        15	,	HI         16	,	ID          17	,	IL       18	,	IN        19	,	IA20	,	KS         21	,	KY       22	,	LA      23	,	ME          24	,	MD       25	,	MA  26	,	MI       27	,	MN      28	,	MS    29	,	MO       30	,	MT        31	,	NE       32	,	NV         33	,	NH  34	,	NJ     35	,	NM     36	,	NY       37	,	NC 38	,	ND   39	,	OH40	,	OK       41	,	OR         42	,	PA   44	,	RI   45	,	SC 46	,	SD   47	,	TN      48	,	TX          49	,	UT50	,	VT        51	,	VA       53	,	WA     54	,	WV  55	,	WI      56	,	WY"#
+stateCodes <- fread(stateCodeCSV)     #
+#Total number of married family with both people in the labor force.#
+#
+stateTotalBoth <- ds	%>%#
+				  filter(FES==1)		%>%#
+				  group_by(ST)	%>%#
+				  summarise(count=n())#
+medianBoth <- ds	%>%#
+				filter(FES==1,FINCP>=77000)	%>%#
+				group_by(ST)		%>%#
+				summarise(count=n())#
+medianBoth <- right_join(medianBoth,stateTotalBoth,by.x=c("ST"))#
+medianBoth[is.na(medianBoth)] <- 0#
+medianBoth <- mutate(medianBoth,value=medianBoth$count/stateTotalBoth$count*100)#
+#
+state_choropleth(medianBoth,title="Percentage of Both People in labor earning more than 77000",number=9)
+state_choropleth(medianBoth,title="Percentage of Both People in labor earning more than 77000",num_colors=9)
+state_choropleth(medianBoth,title="Percentage of Both People in labor earning more than 77000")
+# Preparation#
+library("dplyr")#
+library("data.table")#
+library("ggplot2")#
+library("choroplethr")
+readIn = function(reRead, colsToKeep, pathA, pathB){#
+  if(reRead == TRUE){#
+    popDataA = fread(pathA, select = colsToKeep)#
+    popDataB = fread(pathB, select = colsToKeep)#
+    popData1 = rbind(popDataA, popDataB)#
+    rm(popDataA, popDataB)#
+    save(popData1, file = "popData1.RData")#
+  }else{#
+    load("popData1.RData")#
+  }#
+  return(popData1)#
+}#
+#
+data1 <- readIn(T,c("ST","FES","FINCP"),"/Users/cheeseloveicecream/Documents/columbia/W4249/ss13husa.csv","/Users/cheeseloveicecream/Documents/columbia/W4249/ss13husb.csv")#
+# Data Manipulation#
+data1 <- tbl_df(data1)#
+ds <- 	data1	%>%#
+		na.omit()	%>%#
+		filter(FES	%in%	c(1,2,3,4))	%>%#
+		group_by(FES)#
+rm(data1)#
+#
+# Visuliazation#
+fescode <- "FES,MarriedFamilyEmployType#
+1,Both in Labor Force#
+2,Husband in Labor Force#
+3,Wife in Labor Force#
+4,Neither in Labor Force"#
+fescodes <- fread(fescode)#
+#
+fesnumbers <- summarise(ds,count=n())#
+fesnumbers <- left_join(fesnumbers,fescodes,by.x=c("FES"))#
+Types <- factor(fesnumbers$MarriedFamilyEmployType,levels=unique(fesnumbers$MarriedFamilyEmployType))#
+#
+# Exploraring the basic statistics#
+ggplot(fesnumbers, aes(x= Types , y=fesnumbers$count, fill= Types)) +                        #
+     geom_bar(stat="identity") + scale_fill_hue(l=50) +#
+     ylab("Num of People") + #
+     xlab("Employment Status") + ggtitle("Comparing Enployment status of Married Family in the US") +#
+     theme(axis.text.x = element_text(angle = 10, hjust = 0.5),#
+     panel.background = element_rect(fill = 'white' ))#
+#
+summary(ds$FINCP)#
+# the 1st quantile is shown as 45800 dollars. We use this as bench line. We want to see the percentage under each type of family who has family income more than 45800 which is approxiamatly middle class.#
+medianper <- ds	%>%#
+			filter(FINCP>=77000)		%>%#
+			group_by(FES)	%>%#
+			summarise(count	=	n())		%>%#
+			mutate(Percent	=	count/fesnumbers$count*100)#
+ggplot(medianper, aes(x= Types , y=medianper$Percent, fill= Types)) +                        #
+       geom_bar(stat="identity") + scale_fill_hue(l=80) +#
+       ylab("Percent %") + #
+       xlab("Employment Status") + ggtitle("Percentages of different Employment Status")+#
+       theme(axis.text.x = element_text(angle = 10, hjust = 0.5),#
+       panel.background = element_rect(fill = 'white' ))#
+#
+stateCodeCSV <- "ST,region     #
+1	,	AL        2	,	AK         4	,	AZ        5	,	AR       6	,	CA     8	,	CO       9	,	CT    10	,	DE       11	,	DC      12	,	FL        13	,	GA        15	,	HI         16	,	ID          17	,	IL       18	,	IN        19	,	IA20	,	KS         21	,	KY       22	,	LA      23	,	ME          24	,	MD       25	,	MA  26	,	MI       27	,	MN      28	,	MS    29	,	MO       30	,	MT        31	,	NE       32	,	NV         33	,	NH  34	,	NJ     35	,	NM     36	,	NY       37	,	NC 38	,	ND   39	,	OH40	,	OK       41	,	OR         42	,	PA   44	,	RI   45	,	SC 46	,	SD   47	,	TN      48	,	TX          49	,	UT50	,	VT        51	,	VA       53	,	WA     54	,	WV  55	,	WI      56	,	WY"#
+stateCodes <- fread(stateCodeCSV)     #
+#Total number of married family with both people in the labor force.#
+#
+stateTotalBoth <- ds	%>%#
+				  filter(FES==1)		%>%#
+				  group_by(ST)	%>%#
+				  summarise(count=n())#
+medianBoth <- ds	%>%#
+				filter(FES==1,FINCP>=77000)	%>%#
+				group_by(ST)		%>%#
+				summarise(count=n())#
+medianBoth <- right_join(medianBoth,stateTotalBoth,by.x=c("ST"))#
+medianBoth[is.na(medianBoth)] <- 0#
+medianBoth <- mutate(medianBoth,value=medianBoth$count/stateTotalBoth$count*100)#
+#
+state_choropleth(medianBoth,title="Percentage of Both People in labor earning more than 77000"Y)
+state_choropleth(medianBoth,title="Percentage of Both People in labor earning more than 77000")
+stateTotalBoth
+medianBoth
+ds
+stateTotalBoth <- ds	%>%#
+				  filter(FES==1)		%>%#
+				  group_by(ST)	%>%#
+				  summarise(count=n())#
+medianBoth <- ds	%>%#
+				filter(FES==1 & FINCP>=77000)	%>%#
+				group_by(ST)		%>%#
+				summarise(count=n())#
+medianBoth <- right_join(medianBoth,stateTotalBoth,by.x=c("ST"))#
+medianBoth[is.na(medianBoth)] <- 0#
+medianBoth <- mutate(medianBoth,value=medianBoth$count/stateTotalBoth$count*100)#
+#
+state_choropleth(medianBoth,title="Percentage of Both People in labor earning more than 77000")
+stateTotalBoth <- ds	%>%#
+				  filter(FES==1)		%>%#
+				  group_by(ST)	%>%#
+				  summarise(count=n())#
+medianBoth <- ds	%>%#
+				filter(FES==1 , FINCP>=77000)	%>%#
+				group_by(ST)		%>%#
+				summarise(count=n())#
+medianBoth <- right_join(medianBoth,stateTotalBoth,by.x=c("ST"))#
+medianBoth[is.na(medianBoth)] <- 0#
+medianBoth <- mutate(medianBoth,value=medianBoth$count/stateTotalBoth$count*100)#
+#
+state_choropleth(medianBoth,title="Percentage of Both People in labor earning more than 77000")
+stateTotalBoth <- ds	%>%#
+				  filter(FES==1)		%>%#
+				  group_by(ST)	%>%#
+				  summarise(count=n())#
+medianBoth <- ds	%>%#
+				filter(FINCP>=77000)	%>%#
+				group_by(ST)		%>%#
+				summarise(count=n())#
+medianBoth <- right_join(medianBoth,stateTotalBoth,by.x=c("ST"))#
+medianBoth[is.na(medianBoth)] <- 0#
+medianBoth <- mutate(medianBoth,value=medianBoth$count/stateTotalBoth$count*100)#
+#
+state_choropleth(medianBoth,title="Percentage of Both People in labor earning more than 77000")
+medianBoth
+medianBoth$value
+stateTotalBoth <- ds	%>%#
+				  filter(FES==1)		%>%#
+				  group_by(ST)	%>%#
+				  summarise(count=n())#
+medianBoth <- ds	%>%#
+				filter(FES==1,FINCP>=77000)	%>%#
+				group_by(ST)		%>%#
+				summarise(count=n())#
+medianBoth <- right_join(medianBoth,stateTotalBoth,by.x=c("ST"))#
+medianBoth[is.na(medianBoth)] <- 0#
+medianBoth <- mutate(medianBoth,value=medianBoth$count/stateTotalBoth$count*100)#
+#
+state_choropleth(medianBoth,title="Percentage of Both People in labor earning more than 77000")
+stateTotalBoth <- ds	%>%#
+				  filter(FES==1)		%>%#
+				  group_by(ST)	%>%#
+				  summarise(count=n())#
+medianBoth <- ds	%>%#
+				filter(FES==1,FINCP>=77000)	%>%#
+				group_by(ST)		%>%#
+				summarise(count=n())#
+medianBoth <- right_join(medianBoth,stateCodes,by.x=c("ST"))#
+medianBoth[is.na(medianBoth)] <- 0#
+medianBoth <- mutate(medianBoth,value=medianBoth$count/stateTotalBoth$count*100)
+stateTotalBoth <- ds	%>%#
+				  filter(FES==1)		%>%#
+				  group_by(ST)	%>%#
+				  summarise(count=n())#
+medianBoth <- ds	%>%#
+				filter(FINCP>=77000)	%>%#
+				group_by(ST)		%>%#
+				summarise(count=n())#
+medianBoth <- right_join(medianBoth,stateCodes,by.x=c("ST"))#
+medianBoth[is.na(medianBoth)] <- 0#
+medianBoth <- mutate(medianBoth,value=medianBoth$count/stateTotalBoth$count*100)
+state_choropleth(medianBoth,title="Percentage of Both People in labor earning more than 77000")
+stateCodeCSV = "ST,region#
+001,alabama#
+002,alaska#
+004,arizona#
+005,arkansas#
+006,california#
+008,colorado#
+009,connecticut#
+010,delaware#
+011,district of columbia#
+012,florida#
+013,georgia#
+015,hawaii#
+016,idaho#
+017,illinois#
+018,indiana#
+019,iowa#
+020,kansas#
+021,kentucky#
+022,louisiana#
+023,maine#
+024,maryland#
+025,massachusetts#
+026,michigan#
+027,minnesota#
+028,mississippi#
+029,missouri#
+030,montana#
+031,nebraska#
+032,nevada#
+033,new hampshire#
+034,new jersey#
+035,new mexico#
+036,new york#
+037,north carolina#
+038,north dakota#
+039,ohio#
+040,oklahoma#
+041,oregon#
+042,pennsylvania#
+044,rhode island#
+045,south carolina#
+046,south dakota#
+047,tennessee#
+048,texas#
+049,utah#
+050,vermont#
+051,virginia#
+053,washington#
+054,west virginia#
+055,wisconsin#
+056,wyoming"#
+stateCodes <- fread(stateCodeCSV)#
+stateCodes <- fread(stateCodeCSV)     #
+#Total number of married family with both people in the labor force.#
+#
+stateTotalBoth <- ds	%>%#
+				  filter(FES==1)		%>%#
+				  group_by(ST)	%>%#
+				  summarise(count=n())#
+medianBoth <- ds	%>%#
+				filter(FES==1,FINCP<=77000)	%>%#
+				group_by(ST)		%>%#
+				summarise(count=n())#
+medianBoth <- right_join(medianBoth,stateCodes,by.x=c("ST"))#
+medianBoth[is.na(medianBoth)] <- 0#
+medianBoth <- mutate(medianBoth,value=medianBoth$count/stateTotalBoth$count*100)
+state_choropleth(medianBoth,title="Percentage of Both People in labor earning more than 77000")
+stateTotalBoth <- ds	%>%#
+				  filter(FES==4)		%>%#
+				  group_by(ST)	%>%#
+				  summarise(count=n())#
+medianBoth <- ds	%>%#
+				filter(FES==4,FINCP<=77000)	%>%#
+				group_by(ST)		%>%#
+				summarise(count=n())#
+medianBoth <- right_join(medianBoth,stateCodes,by.x=c("ST"))#
+medianBoth[is.na(medianBoth)] <- 0#
+medianBoth <- mutate(medianBoth,value=medianBoth$count/stateTotalBoth$count*100)#
+#
+state_choropleth(medianBoth,title="Percentage of Both People in labor earning more than 77000")
+stateTotalBoth <- ds	%>%#
+				  filter(FES==4)		%>%#
+				  group_by(ST)	%>%#
+				  summarise(count=n())#
+medianBoth <- ds	%>%#
+				filter(FES==4,FINCP>=77000)	%>%#
+				group_by(ST)		%>%#
+				summarise(count=n())#
+medianBoth <- right_join(medianBoth,stateCodes,by.x=c("ST"))#
+medianBoth[is.na(medianBoth)] <- 0#
+medianBoth <- mutate(medianBoth,value=medianBoth$count/stateTotalBoth$count*100)#
+#
+state_choropleth(medianBoth,title="Percentage of Both People in labor earning more than 77000")
+state_choropleth(medianBoth,title="Percentage of Both People in labor earning more than 77000",num_colors=3)
+state_choropleth(medianBoth,title="Percentage of Both People in labor earning more than 77000",num_colors=2)
+summary(ds$FINCP)
+stateTotalBoth <- ds	%>%#
+				  filter(FES==4)		%>%#
+				  group_by(ST)	%>%#
+				  summarise(count=n())#
+medianBoth <- ds	%>%#
+				filter(FES==4,FINCP>= 121200)	%>%#
+				group_by(ST)		%>%#
+				summarise(count=n())#
+medianBoth <- right_join(medianBoth,stateCodes,by.x=c("ST"))#
+medianBoth[is.na(medianBoth)] <- 0#
+medianBoth <- mutate(medianBoth,value=medianBoth$count/stateTotalBoth$count*100)#
+#
+state_choropleth(medianBoth,title="Percentage of Both People in labor earning more than 77000",num_colors=2	)
+stateTotalBoth <- ds	%>%#
+				  filter(FES==4)		%>%#
+				  group_by(ST)	%>%#
+				  summarise(count=n())#
+medianBoth <- ds	%>%#
+				filter(FES==4,FINCP>= 121200)	%>%#
+				group_by(ST)		%>%#
+				summarise(count=n())#
+medianBoth <- right_join(medianBoth,stateCodes,by.x=c("ST"))#
+medianBoth[is.na(medianBoth)] <- 0#
+medianBoth <- mutate(medianBoth,value=medianBoth$count/stateTotalBoth$count*100)#
+#
+state_choropleth(medianBoth,title="Percentage of Both People in labor earning more than 121200",num_colors=2	)
+state_choropleth(medianBoth,title="Percentage of Both People in labor earning more than 121200",num_colors=3	)
+state_choropleth(medianBoth,title="Percentage of Both People in labor earning more than 121200",num_colors=4	)
+state_choropleth(medianBoth,title="Percentage of Both People in labor earning more than 121200",num_colors=3	)
+library("dplyr")#
+library("data.table")#
+library("ggplot2")#
+library("choroplethr")#
+#
+# Readin data#
+readIn = function(reRead, colsToKeep, pathA, pathB){#
+  if(reRead == TRUE){#
+    popDataA = fread(pathA, select = colsToKeep)#
+    popDataB = fread(pathB, select = colsToKeep)#
+    popData1 = rbind(popDataA, popDataB)#
+    rm(popDataA, popDataB)#
+    save(popData1, file = "popData1.RData")#
+  }else{#
+    load("popData1.RData")#
+  }#
+  return(popData1)#
+}#
+#
+data1 <- readIn(T,c("ST","FES","FINCP","ADJINC"),"/Users/cheeseloveicecream/Documents/columbia/W4249/ss13husa.csv","/Users/cheeseloveicecream/Documents/columbia/W4249/ss13husb.csv")
+data1
+data1$FINCP <- data1$FINCP*1.007549
+data1 <- tbl_df(data1)#
+ds <- 	data1	%>%#
+		na.omit()	%>%#
+		filter(FES	%in%	c(1,2,3,4))	%>%#
+		group_by(FES)#
+rm(data1)
+ds
+fescode <- "FES,MarriedFamilyEmployType#
+1,Both in Labor Force#
+2,Husband in Labor Force#
+3,Wife in Labor Force#
+4,Neither in Labor Force"#
+fescodes <- fread(fescode)#
+#
+fesnumbers <- summarise(ds,count=n())#
+fesnumbers <- left_join(fesnumbers,fescodes,by.x=c("FES"))#
+Types <- factor(fesnumbers$MarriedFamilyEmployType,levels=unique(fesnumbers$MarriedFamilyEmployType))#
+#
+# Exploraring the basic statistics#
+ggplot(fesnumbers, aes(x= Types , y=fesnumbers$count, fill= Types)) +                        #
+     geom_bar(stat="identity") + scale_fill_hue(l=50) +#
+     ylab("Num of People") + #
+     xlab("Employment Status") + ggtitle("Comparing Enployment status of Married Family in the US") +#
+     theme(axis.text.x = element_text(angle = 10, hjust = 0.5),#
+     panel.background = element_rect(fill = 'white' ))
+summary(ds$FINCP)
+ds$FINCP
+ds
+summary(ds$FINCP)
+medianper <- ds	%>%#
+			filter(FINCP>=77580)		%>%#
+			group_by(FES)	%>%#
+			summarise(count	=	n())		%>%#
+			mutate(Percent	=	count/fesnumbers$count*100)#
+ggplot(medianper, aes(x= Types , y=medianper$Percent, fill= Types)) +                        #
+       geom_bar(stat="identity") + scale_fill_hue(l=80) +#
+       ylab("Percent %") + #
+       xlab("Employment Status") + ggtitle("Percentages of different Employment Status")+#
+       theme(axis.text.x = element_text(angle = 10, hjust = 0.5),#
+       panel.background = element_rect(fill = 'white' ))
+medianper <- ds	%>%#
+			filter(FINCP>=77580)		%>%#
+			group_by(FES)	%>%#
+			summarise(count	=	n())		%>%#
+			mutate(Percent	=	count/fesnumbers$count*100)#
+ggplot(medianper, aes(x= Types , y=medianper$Percent, fill= Types)) +                        #
+       geom_bar(stat="identity") + scale_fill_hue(l=80) +#
+       ylab("Percent %") + #
+       xlab("Employment Status") + ggtitle("Percentages of different Employment Status")+#
+       theme(axis.text.x = element_text(angle = 10, hjust = 0.5),#
+       panel.background = element_rect(fill = 'white' ))
+stateCodeCSV = "ST,region#
+001,alabama#
+002,alaska#
+004,arizona#
+005,arkansas#
+006,california#
+008,colorado#
+009,connecticut#
+010,delaware#
+011,district of columbia#
+012,florida#
+013,georgia#
+015,hawaii#
+016,idaho#
+017,illinois#
+018,indiana#
+019,iowa#
+020,kansas#
+021,kentucky#
+022,louisiana#
+023,maine#
+024,maryland#
+025,massachusetts#
+026,michigan#
+027,minnesota#
+028,mississippi#
+029,missouri#
+030,montana#
+031,nebraska#
+032,nevada#
+033,new hampshire#
+034,new jersey#
+035,new mexico#
+036,new york#
+037,north carolina#
+038,north dakota#
+039,ohio#
+040,oklahoma#
+041,oregon#
+042,pennsylvania#
+044,rhode island#
+045,south carolina#
+046,south dakota#
+047,tennessee#
+048,texas#
+049,utah#
+050,vermont#
+051,virginia#
+053,washington#
+054,west virginia#
+055,wisconsin#
+056,wyoming"#
+stateCodes <- fread(stateCodeCSV)#
+stateCodes <- fread(stateCodeCSV)     #
+#Total number of married family with both people in the labor force.#
+#
+stateTotalBoth <- ds	%>%#
+				  filter(FES==4)		%>%#
+				  group_by(ST)	%>%#
+				  summarise(count=n())#
+medianBoth <- ds	%>%#
+				filter(FES==4,FINCP>= 121200)	%>%#
+				group_by(ST)		%>%#
+				summarise(count=n())#
+medianBoth <- right_join(medianBoth,stateCodes,by.x=c("ST"))#
+medianBoth[is.na(medianBoth)] <- 0#
+medianBoth <- mutate(medianBoth,value=medianBoth$count/stateTotalBoth$count*100)#
+#
+state_choropleth(medianBoth,title="Percentage of Neither People in labor earning more than 121200",num_colors=3	)
